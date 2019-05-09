@@ -39,6 +39,12 @@ a{
     background-color: #AE9473;
     border-radius: 5px 5px 0px 0px;
 }
+.b-white{
+    background: #fff;
+}
+.border{
+    border: 1px solid black;
+}
 
 /*Flex*/
 .flex{
@@ -87,6 +93,9 @@ a{
 .m-lr-20{
     margin: 0px 20px;
 }
+.m-20{
+    margin: 20px;
+}
 .p-10{
     padding: 10px;
 }
@@ -107,6 +116,21 @@ a{
 .knap:hover{
     background-color: #488c60;
 }
+input[type=text]{
+    border: 1px solid black;
+    width: 50%;
+    font-style: italic;
+}
+textarea{
+    border: 1px solid black;
+}
+input[type=submit]{
+    background-color: #3F7B54;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+    border: 0px;
+}
 
 /*General*/
 body{
@@ -125,6 +149,17 @@ body{
 .image{
     width: 100%;
 }
+.brugernavn{
+    width: 50%;
+    margin-bottom: -1px;
+}
+.comment{
+    border-radius: 0px 5px 5px;
+}
+
+
+
+
 
 .flex-container {
   display: flex;

@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="img/tinyicon.png">
 </head>
 <body class="flex-column center">
+    <?php include "include/header.php" ?>
     <section class="content">
         <div class="card m-tb-20">
             <div class="b-brown p-10">
@@ -19,7 +20,7 @@
             </div>
             <img class="image" src="img/5900.jpg">
             <p class="m-tb-10 m-lr-20">Nulla pharetra, turpis vel laoreet porta, ligula tellus dictum magna, bibendum vehicula magna diam nec lorem. Curabitur at laoreet lectus, sit amet varius est. Nunc at risus varius leo rhoncus auctor vel quis augue. Nunc nulla est, scelerisque eget ex et, vulputate aliquam leo. Integer ut sapien nec tortor cursus luctus at at elit. Proin lectus tellus, euismod eget pellentesque in, sodales eget velit. Cras vel laoreet purus, ac lobortis velit. Nullam dolor odio, rutrum quis scelerisque id, auctor eget lectus. Mauris gravida eros tortor, a consectetur eros viverra a. Donec auctor bibendum purus at cursus. Pellentesque </p>
-            <a class="f-white flex-column right" href="">
+            <a class="f-white flex-column right" href="readmore.php">
                 <h3 class="knap">
                     Læs mere
                 </h3>
