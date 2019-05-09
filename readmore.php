@@ -5,6 +5,7 @@
 <title>Plakatforretningen.dk | Blog</title>
 <link href="css/reset.css" rel="stylesheet">
 <link href="css/css.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,600" rel="stylesheet">
 <link rel="icon" type="image/png" href="img/tinyicon.png">
 </head>
 <body class="flex-column center">
