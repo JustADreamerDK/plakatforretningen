@@ -1,3 +1,13 @@
+<?php
+include "include/connect.php";
+include "phpcode/crud.php";
+$id = $_GET['id'];
+$indlaeg = getIndlaegById($id);
+$rowIndlaeg = mysqli_fetch_assoc($indlaeg);
+$comments = getComments($id);
+$checkComments = getComments($id);
+?>
+
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -12,22 +22,21 @@
 <section class="content">
     <div class="card m-tb-20">
         <div class="b-brown p-10">
-            <h2 class="f-white bold">Har du set denne mand? Bliv inde og lås jeres dør!</h2>
+            <h2 class="f-white bold"><?php echo $rowIndlaeg['overskrift']; ?></h2>
         </div>
         <div class="flex between m-lr-10">
-            <h3 class="m-tb-10 bold">Andet</h3>
-            <h3 class="m-tb-10 bold">08-05-2019</h3>
+            <h3 class="m-tb-10 bold"><?php
+            $kategori_id = $rowIndlaeg['kategori_id'];
+            $kategori = getKategori($kategori_id);
+            $rowKategori = mysqli_fetch_assoc($kategori);
+            echo $rowKategori['kategori']; ?></h3>
+            <h3 class="m-tb-10 bold"><?php $date = $rowIndlaeg['dato'];
+            $dato = new DateTime("$date");
+            echo $dato->format('d-m-Y');
+            ?></h3>
         </div>
         <img class="image" src="img/5900.jpg">
-        <p class="m-tb-10 m-lr-20 p-b-25">Nulla pharetra, turpis vel laoreet porta, ligula tellus dictum magna, bibendum vehicula magna diam nec lorem. Curabitur at laoreet lectus, sit amet varius est. Nunc at risus varius leo rhoncus auctor vel quis augue. Nunc nulla est, scelerisque eget ex et, vulputate aliquam leo. Integer ut sapien nec tortor cursus luctus at at elit. Proin lectus tellus, euismod eget pellentesque in, sodales eget velit. Cras vel laoreet purus, ac lobortis velit. Nullam dolor odio, rutrum quis scelerisque id, auctor eget lectus. Mauris gravida eros tortor, a consectetur eros viverra a. Donec auctor bibendum purus at cursus.
-
-            Nulla pharetra, turpis vel laoreet porta, ligula tellus dictum magna, bibendum vehicula magna diam nec lorem. Curabitur at laoreet lectus, sit amet varius est. Nunc at risus varius leo rhoncus auctor vel quis augue. Nunc nulla est, scelerisque eget ex et, vulputate aliquam leo. Integer ut sapien nec tortor cursus luctus at at elit. Proin lectus tellus, euismod eget pellentesque in, sodales eget velit. Cras vel laoreet purus, ac lobortis velit. Nullam dolor odio, rutrum quis scelerisque id, auctor eget lectus. Mauris gravida eros tortor, a consectetur eros viverra a. Donec auctor bibendum purus at cursus.
-
-            Nulla pharetra, turpis vel laoreet porta, ligula tellus dictum magna, bibendum vehicula magna diam nec lorem. Curabitur at laoreet lectus, sit amet varius est. Nunc at risus varius leo rhoncus auctor vel quis augue. Nunc nulla est, scelerisque eget ex et, vulputate aliquam leo. Integer ut sapien nec tortor cursus luctus at at elit. Proin lectus tellus, euismod eget pellentesque in, sodales eget velit. Cras vel laoreet purus, ac lobortis velit. Nullam dolor odio, rutrum quis scelerisque id, auctor eget lectus. Mauris gravida eros tortor, a consectetur eros viverra a. Donec auctor bibendum purus at cursus.
-
-            Nulla pharetra, turpis vel laoreet porta, ligula tellus dictum magna, bibendum vehicula magna diam nec lorem. Curabitur at laoreet lectus, sit amet varius est. Nunc at risus varius leo rhoncus auctor vel quis augue. Nunc nulla est, scelerisque eget ex et, vulputate aliquam leo. Integer ut sapien nec tortor cursus luctus at at elit. Proin lectus tellus, euismod eget pellentesque in, sodales eget velit. Cras vel laoreet purus, ac lobortis velit. Nullam dolor odio, rutrum quis scelerisque id, auctor eget lectus. Mauris gravida eros tortor, a consectetur eros viverra a. Donec auctor bibendum purus at cursus.
-
-            Nulla pharetra, turpis vel laoreet porta, ligula tellus dictum magna, bibendum vehicula magna diam nec lorem. Curabitur at laoreet lectus, sit amet varius est. Nunc at risus varius leo rhoncus auctor vel quis augue. Nunc nulla est, scelerisque eget ex et, vulputate aliquam leo. Integer ut sapien nec tortor cursus luctus at at elit. Proin lectus tellus, euismod eget pellentesque in, sodales eget velit. Cras vel laoreet purus, ac lobortis velit. Nullam dolor odio, rutrum quis scelerisque id, auctor eget lectus. Mauris gravida eros tortor, a consectetur eros viverra a. Donec auctor bibendum purus at cursus.</p>
+        <p class="m-tb-10 m-lr-20 p-b-25"><?php echo $rowIndlaeg['tekst']; ?></p>
         </div>
 
         <div class="card m-tb-20">
@@ -41,12 +50,21 @@
             </div>
             </form>
 
+            <?php $test = mysqli_fetch_assoc($checkComments);
+        $check = $test['navn'];
+        if ($check <> ''){?>
+            <?php while ($rowComments = mysqli_fetch_assoc($comments)) { ?>
             <div class="p-10">
                 <div class="m-20">
-                    <h3 class="b-brown p-10 f-white bold border brugernavn">Pedersen og Findus</h3>
-                    <p class="p-10 border b-white comment">Hide your kids! Hide your wife!</p>
+                    <h3 class="b-brown p-10 f-white bold border brugernavn"><?php echo $rowComments['navn'] ?></h3>
+                    <p class="p-10 border b-white comment"><?php echo $rowComments['tekst']; ?></p>
                 </div>
             </div>
+        <?php }}else{ ?>
+            <div class="m-20">
+                <h3 class="p-b-25 bold">Der er endnu ingen kommentarer til dette indlæg</h3>
+            </div>
+        <?php } ?>
         </div>
     </section>
 </body>
