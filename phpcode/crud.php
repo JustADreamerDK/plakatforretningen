@@ -35,6 +35,12 @@ function getKategori($id){
     return $result;
 }
 
+function getUser($brugernavn){
+    global $objCon;
+    $sql = "SELECT `id`, `navn`, `email`, `brugernavn`, `password` FROM `admin` WHERE `brugernavn` = '$brugernavn'";
+    $result = $objCon->query($sql);
+    return $result;
+}
 
 
 

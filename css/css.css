@@ -24,6 +24,10 @@ p{
 /*Font weight/deco/style*/
 a{
     text-decoration: none;
+    color: black;
+}
+.back:hover{
+    font-weight: bold;
 }
 .bold{
     font-weight: 600;
@@ -85,6 +89,9 @@ a{
 .m-tb-20{
     margin: 20px 0px;
 }
+.m-t-10{
+    margin-top: 10px;
+}
 .m-lr-10{
     margin: 0px 10px;
 }
@@ -100,8 +107,6 @@ a{
 .p-b-25{
     padding: 0px 0px 25px 0px;
 }
-
-/*Sizes*/
 
 /*Buttons & Inputs*/
 .knap{
@@ -119,6 +124,11 @@ input[type=text]{
     width: 50%;
     font-style: italic;
 }
+input[type=password]{
+    border: 1px solid black;
+    width: 50%;
+    font-style: italic;
+}
 textarea{
     border: 1px solid black;
 }
@@ -128,6 +138,30 @@ input[type=submit]{
     text-align: center;
     width: 100px;
     border: 0px;
+}
+.header-knap{
+  padding: 5px 35px 5px 35px;
+  margin-left: 10px;
+  font-size:24px;
+  background-color: #666462;
+  border: none;
+}
+.header-knap:hover {
+  background-color: #757371;
+  cursor: pointer;
+}
+.soeg{
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      font-size:50px;
+      padding: 0px 45px;
+      margin-right: 10px;
+      color:#E2E3DE;
+}
+.soeg:hover {
+  color: #EDEEEB;
 }
 
 /*General*/
@@ -158,32 +192,22 @@ header{
     background: #464543;
     width: 100%;
 }
-.header-knap{
-  padding: 5px 35px 5px 35px;
-  margin-left: 10px;
-  font-size:24px;
-  background-color: #666462;
-  border: none;
-}
-.header-knap:hover {
-  background-color: #757371;
-  cursor: pointer;
-}
-.soeg{
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      font-size:50px;
-      padding: 0px 45px;
-      color:#E2E3DE;
-}
-.soeg:hover {
-  color: #EDEEEB;
-}
+
 .logo{
     height: 100px;
     padding: 10px;
+}
+.w-100{
+    width: 100%;
+}
+.w-50{
+    width: 52%;
+}
+.menu{
+    width: 15%;
+}
+.admin-content{
+    width: 85%;
 }
 
 @media screen and (max-width: 1000px) {
