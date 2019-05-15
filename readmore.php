@@ -22,9 +22,9 @@ $checkComments = getComments($id);
 <section class="content">
     <div class="card m-tb-20">
         <div class="b-brown p-10">
-            <h2 class="f-white bold"><?php echo $rowIndlaeg['overskrift']; ?></h2>
+            <h2 class="f-white bold m-lr-10"><?php echo $rowIndlaeg['overskrift']; ?></h2>
         </div>
-        <div class="flex between m-lr-10">
+        <div class="flex between m-lr-20">
             <h3 class="m-tb-10 bold"><?php
             $kategori_id = $rowIndlaeg['kategori_id'];
             $kategori = getKategori($kategori_id);
@@ -35,7 +35,12 @@ $checkComments = getComments($id);
             echo $dato->format('d-m-Y');
             ?></h3>
         </div>
-        <img class="image" src="img/5900.jpg">
+        <?php $billed = getPicture($rowIndlaeg['id']);
+        $rowBilled = mysqli_fetch_assoc($billed);
+        $erDer = $rowBilled['fil_navn'];
+        if ($erDer <> ''){ ?>
+            <img class="image" src="img/<?php echo $erDer; ?>" alt="<?php echo $rowBilled['navn']; ?>">
+        <?php }; ?>
         <p class="m-tb-10 m-lr-20 p-b-25"><?php echo $rowIndlaeg['tekst']; ?></p>
         </div>
 

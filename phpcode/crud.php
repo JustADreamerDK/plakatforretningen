@@ -21,6 +21,13 @@ function getComments($id){
     return $result;
 }
 
+function getPicture($id){
+    global $objCon;
+    $sql = "SELECT `id`, `indlaeg_id`, `navn`, `fil_navn` FROM `billede` WHERE `indlaeg_id` = '$id'";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
 function getKategori($id){
     global $objCon;
     $sql = "SELECT `id`, `kategori` FROM `kategori` WHERE `id` = $id";
