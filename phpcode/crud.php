@@ -42,8 +42,53 @@ function getUser($brugernavn){
     return $result;
 }
 
+function getAllAdmins(){
+    global $objCon;
+    $sql = "SELECT `id`, `navn`, `email`, `brugernavn`, `password` FROM `admin`";
+    $result = $objCon->query($sql);
+    return $result;
+}
 
+function getAdminById($id){
+    global $objCon;
+    $sql = "SELECT `id`, `navn`, `email`, `brugernavn`, `password` FROM `admin` WHERE `id` = '$id'";
+    $result = $objCon->query($sql);
+    return $result;
+}
 
+function getAllComments(){
+    global $objCon;
+    $sql = "SELECT `id`, `navn`, `mail`, `dato`, `tekst`, `indlaeg_id` FROM `kommentar`";
+    $result = $objCon->query($sql);
+    return $result;
+}
 
+function getCommentById($id){
+    global $objCon;
+    $sql = "SELECT `id`, `navn`, `mail`, `dato`, `tekst`, `indlaeg_id` FROM `kommentar` WHERE `id` = '$id'";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
+function deleteComment($id){
+    global $objCon;
+    $sql = "DELETE FROM `kommentar` WHERE `id` = '$id'";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
+function deleteAdmin($id){
+    global $objCon;
+    $sql = "DELETE FROM `admin` WHERE `id` = '$id'";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
+function deleteIndlaeg($id){
+    global $objCon;
+    $sql = "DELETE FROM `indlaeg` WHERE `id` = '$id'";
+    $result = $objCon->query($sql);
+    return $result;
+}
 
 ?>

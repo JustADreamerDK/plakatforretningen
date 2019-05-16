@@ -200,6 +200,9 @@ header{
 .w-100{
     width: 100%;
 }
+.w-80{
+    width: 80%;
+}
 .w-50{
     width: 52%;
 }
@@ -208,6 +211,18 @@ header{
 }
 .admin-content{
     width: 85%;
+}
+tr:nth-child(even){
+    background: lightgrey;
+}
+tr:nth-child(odd){
+    background: #EDEEEB;
+}
+tr:last-child{
+    border-bottom: 0px;
+}
+.dato{
+    min-width: 85px;
 }
 
 @media screen and (max-width: 1000px) {
