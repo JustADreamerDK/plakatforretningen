@@ -3,6 +3,7 @@
         <li><h2 class="bold m-tb-10">Menu</h2></li>
         <li class="bold"><h3>Indlæg</h3></li>
         <li><a href="se_indlaeg.php"><h4 class="f-black">Se alle</h4></a></li>
+        <li><a href="opret_indlaeg.php"><h4 class="f-black">Opret</h4></a></li>
 
         <li class="bold m-t-10"><h3>Kommentarer</h3></li>
         <li><a href="se_kommentar.php"><h4 class="f-black">Se alle</h4></a></li>
