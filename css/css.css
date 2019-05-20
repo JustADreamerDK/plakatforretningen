@@ -129,6 +129,16 @@ input[type=password]{
     width: 50%;
     font-style: italic;
 }
+input[type=date]{
+    border: 1px solid black;
+    width: 50%;
+    font-style: italic;
+}
+select{
+    border: 1px solid black;
+    width: 54%;
+    font-style: italic;
+}
 textarea{
     border: 1px solid black;
 }

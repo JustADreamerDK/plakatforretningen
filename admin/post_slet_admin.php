@@ -3,7 +3,7 @@ session_start();
 include "../include/connect.php";
 include "../phpcode/crud.php";
 $id = $_GET['id'];
-$slet = deleteAdmin($id);
+deleteAdmin($id);
 ?>
 <!DOCTYPE html>
 <html lang="da">

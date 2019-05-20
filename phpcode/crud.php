@@ -28,6 +28,13 @@ function getPicture($id){
     return $result;
 }
 
+function getAllKategori(){
+    global $objCon;
+    $sql = "SELECT `id`, `kategori` FROM `kategori`";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
 function getKategori($id){
     global $objCon;
     $sql = "SELECT `id`, `kategori` FROM `kategori` WHERE `id` = $id";
@@ -70,6 +77,13 @@ function getCommentById($id){
     return $result;
 }
 
+function getLastDay(){
+    global $objCon;
+    $sql = "SELECT `id`, `overskrift`, `dato`, `kategori_id`, `tekst` FROM `indlaeg` ORDER BY `id` DESC";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
 function deleteComment($id){
     global $objCon;
     $sql = "DELETE FROM `kommentar` WHERE `id` = '$id'";
@@ -87,6 +101,48 @@ function deleteAdmin($id){
 function deleteIndlaeg($id){
     global $objCon;
     $sql = "DELETE FROM `indlaeg` WHERE `id` = '$id'";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
+function createComment($navn, $mail, $dato, $tekst, $indlaeg_id){
+    global $objCon;
+    $sql = "INSERT INTO `kommentar`(`navn`, `mail`, `dato`, `tekst`, `indlaeg_id`) VALUES ('$navn', '$mail', '$dato', '$tekst', '$indlaeg_id')";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
+function createAdmin($navn, $email, $brugernavn, $password){
+    global $objCon;
+    $sql = "INSERT INTO `admin`(`navn`, `email`, `brugernavn`, `password`) VALUES ('$navn','$email','$brugernavn','$password')";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
+function createIndlaeg($overskrift, $dato, $kategori_id, $tekst){
+    global $objCon;
+    $sql = "INSERT INTO `indlaeg`(`overskrift`, `dato`, `kategori_id`, `tekst`) VALUES ('$overskrift','$dato','$kategori_id','$tekst')";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
+function createPicture($indlaeg_id, $fil_navn){
+    global $objCon;
+    $sql = "INSERT INTO `billede`(`indlaeg_id`, `fil_navn`) VALUES ('$indlaeg_id', '$fil_navn')";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
+function updateIndlaeg($id, $overskrift, $dato, $kategori, $tekst){
+    global $objCon;
+    $sql = "UPDATE `indlaeg` SET `overskrift`='$overskrift',`dato`='$dato',`kategori_id`='$kategori',`tekst`='$tekst' WHERE `id` = $id";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
+function updateAdmin($id, $navn, $email, $brugernavn, $password){
+    global $objCon;
+    $sql = "UPDATE `admin` SET `navn`='$navn',`email`='$email',`brugernavn`='$brugernavn',`password`='$password' WHERE `id` = $id";
     $result = $objCon->query($sql);
     return $result;
 }

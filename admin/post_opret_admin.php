@@ -2,8 +2,11 @@
 session_start();
 include "../include/connect.php";
 include "../phpcode/crud.php";
-$id = $_GET['id'];
-deleteIndlaeg($id);
+$navn = $_POST['name'];
+$email = $_POST['mail'];
+$brugernavn = $_POST['brugernavn'];
+$password = $_POST['password'];
+createAdmin($navn, $email, $brugernavn, $password);
 ?>
 <!DOCTYPE html>
 <html lang="da">
@@ -20,8 +23,8 @@ deleteIndlaeg($id);
         <?php include "menu.php"; ?>
         <div class="admin-content p-10 m-tb-20 flex-column center">
 
-            <h2>Slet indlæg</h2>
-            <h3 class="p-10">Indlægget er nu slettet</h3>
+            <h2>Opret admin</h2>
+            <h3 class="p-10">Administratoren er nu oprettet</h3>
 
         </div>
     </section>
