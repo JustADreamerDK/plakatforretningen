@@ -21,9 +21,9 @@ $row = mysqli_fetch_assoc($admin);
         <?php include "menu.php"; ?>
         <div class="admin-content p-10 m-tb-20 flex-column center">
 
-            <h2 class="p-10">Slet admin</h2>
-            <h3>Er du sikker på at du vil slette følgende administrator?</h3>
-            <h4 class="m-tb-10"><?php echo $row['navn'];?> med mailen <?php echo $row['email']; ?></h4>
+            <h2>Slet administrator</h2>
+            <h3 class="p-10">Er du sikker på at du vil slette følgende administrator?</h3>
+            <h4><?php echo $row['navn'];?> med mailen <?php echo $row['email']; ?></h4>
 
             <div class="flex between w-50 m-tb-10">
                 <h4><a class="back" href="post_slet_admin.php?id=<?php echo $row['id']; ?>">Ja</a></h4>

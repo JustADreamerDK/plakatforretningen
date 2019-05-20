@@ -21,12 +21,12 @@ $row = mysqli_fetch_assoc($indlaeg);
         <?php include "menu.php"; ?>
         <div class="admin-content p-10 m-tb-20 flex-column center">
 
-            <h2 class="p-10">Slet indlæg</h2>
+            <h2>Slet indlæg</h2>
 
-            <h3>Er du sikker på at du vil slette følgende indlæg?</h3>
+            <h3 class="p-10">Er du sikker på at du vil slette følgende indlæg?</h3>
 
-            <h3 class="m-tb-10"><?php echo $row['overskrift'] ?></h3>
-            <h4>I kategorien <?php
+            <h3><?php echo $row['overskrift'] ?></h3>
+            <h4 class="m-tb-10">I kategorien <?php
             $kategori_id = $row['kategori_id'];
             $kategori = getKategori($kategori_id);
             $rowKategori = mysqli_fetch_assoc($kategori);
