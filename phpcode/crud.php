@@ -105,6 +105,13 @@ function deleteIndlaeg($id){
     return $result;
 }
 
+function deletePicture($id){
+    global $objCon;
+    $sql = "DELETE FROM `billede` WHERE `id` = '$id'";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
 function createComment($navn, $mail, $dato, $tekst, $indlaeg_id){
     global $objCon;
     $sql = "INSERT INTO `kommentar`(`navn`, `mail`, `dato`, `tekst`, `indlaeg_id`) VALUES ('$navn', '$mail', '$dato', '$tekst', '$indlaeg_id')";

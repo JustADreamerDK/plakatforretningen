@@ -3,7 +3,7 @@ session_start();
 include "../include/connect.php";
 include "../phpcode/crud.php";
 $id = $_GET['id'];
-deleteAdmin($id);
+deletePicture($id);
 ?>
 <!DOCTYPE html>
 <html lang="da">
@@ -20,8 +20,8 @@ deleteAdmin($id);
         <?php include "menu.php"; ?>
         <div class="admin-content p-10 m-tb-20 flex-column center">
 
-            <h2>Slet admin</h2>
-            <h3 class="p-10">Administratoren er nu slettet</h3>
+            <h2>Slet billede</h2>
+            <h3 class="p-10">Billedet er nu slettet</h3>
 
         </div>
     </section>

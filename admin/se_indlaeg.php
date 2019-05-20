@@ -63,7 +63,7 @@ include "../phpcode/crud.php";
                         <?php if($erDer <> ''){ ?>
                         <div class="flex middle p-b-10">
                             <h4>
-                                <a class="back" href="">
+                                <a class="back" href="slet_billede.php?id=<?php echo $row['id']; ?>">
                                     Slet billede
                                 </a>
                             </h4>
