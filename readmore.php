@@ -6,6 +6,7 @@ $indlaeg = getIndlaegById($id);
 $rowIndlaeg = mysqli_fetch_assoc($indlaeg);
 $comments = getComments($id);
 $checkComments = getComments($id);
+$comment = $_GET['comment'];
 ?>
 
 <!DOCTYPE html>
@@ -47,16 +48,27 @@ $checkComments = getComments($id);
 
         <div class="card m-tb-20">
             <h2 class="bold p-10 flex middle">Kommentarer</h2>
-            <form  class="flex-column m-20" action="post-opret-bruger.php" method="post" class="flex-column">
-                <input class="p-10 m-tb-10" type="text" name="name" placeholder="Navn"></input>
-                <input class="p-10" type="text" name="mail" placeholder="Mail adresse"></input>
-                <textarea rows="8" class="p-10 m-tb-10">Skriv din kommentar her</textarea>
+            <?php if($comment == 'yes'){
+                $navn = $_POST['name'];
+                $mail = $_POST['mail'];
+                $dato = (new \DateTime())->format('Y-m-d');
+                $tekst = $_POST['text'];
+                $indlaeg_id = $_GET['id'];
+                createComment($navn, $mail, $dato, $tekst, $indlaeg_id);
+                ?>
+                <h3 class="m-20">Mange tak for din kommentar!</h3>
+                <?php
+            }else{ ?>
+            <form  class="flex-column m-20" action="opret_comment.php?id=<?php echo $rowIndlaeg['id'];?>" method="post" class="flex-column">
+                <input class="p-10 m-tb-10" type="text" name="name" placeholder="Navn" required></input>
+                <input class="p-10" type="text" name="mail" placeholder="Mail adresse" required></input>
+                <textarea rows="8" class="p-10 m-tb-10" name="text">Skriv din kommentar her</textarea>
                 <div class="flex-column right">
                     <input class="f-white bold" type="submit" value="Send"></input>
                 </div>
             </form>
-
-            <?php $test = mysqli_fetch_assoc($checkComments);
+        <?php }
+            $test = mysqli_fetch_assoc($checkComments);
             $check = $test['navn'];
             if ($check <> ''){?>
                 <?php while ($rowComments = mysqli_fetch_assoc($comments)) { ?>
