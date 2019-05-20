@@ -36,7 +36,7 @@ include "../phpcode/crud.php";
                                     while ($row = mysqli_fetch_assoc($comments)) {
                                         ?>
                                         <tr>
-                                            <td class="p-10"><h4><?php echo $row['navn'] ?></h4></td>
+                                            <td class="p-10 dato"><h4><?php echo $row['navn'] ?></h4></td>
                                             <td class="p-10"><h4><?php echo $row['mail'] ?></h4></td>
                                             <td class="p-10 dato"><h4><?php $date = $row['dato'];
                                             $dato = new DateTime("$date");
