@@ -37,7 +37,7 @@ include "../phpcode/crud.php";
                                     while ($row = mysqli_fetch_assoc($admin)) {
                                         ?>
                                         <tr>
-                                            <td class="p-10"><h4><?php echo $row['navn'] ?></h4></td>
+                                            <td class="p-10 dato"><h4><?php echo $row['navn'] ?></h4></td>
                                             <td class="p-10"><h4><?php echo $row['email'] ?></h4></td>
                                             <td class="p-10"><h4><?php echo $row['brugernavn'] ?></h4></td>
                                             <td class="p-10"><h4><?php echo $row['password'] ?></h4></td>
