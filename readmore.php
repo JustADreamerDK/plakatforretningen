@@ -41,7 +41,7 @@ $comment = $_GET['comment'];
             $rowBilled = mysqli_fetch_assoc($billed);
             $erDer = $rowBilled['fil_navn'];
             if ($erDer <> ''){ ?>
-                <img class="image" src="img/<?php echo $erDer; ?>" alt="<?php echo $rowBilled['navn']; ?>">
+                <img class="image" src="img/<?php echo $erDer; ?>">
             <?php }; ?>
             <p class="m-tb-10 m-lr-20 p-b-25"><?php echo $rowIndlaeg['tekst']; ?></p>
         </div>

@@ -39,7 +39,7 @@ $indlaeg = getIndlaeg();
                 $rowBilled = mysqli_fetch_assoc($billed);
                 $erDer = $rowBilled['fil_navn'];
                 if ($erDer <> ''){ ?>
-                    <img class="image" src="img/<?php echo $erDer; ?>" alt="<?php echo $rowBilled['navn']; ?>">
+                    <img class="image" src="img/<?php echo $erDer; ?>">
                 <?php }; ?>
                 <?php $beskrivelse = mb_substr($rowIndlaeg['tekst'], 0, 500, 'UTF-8');
                 $tal = mb_strrpos($beskrivelse, ' ', 0, 'UTF-8');
