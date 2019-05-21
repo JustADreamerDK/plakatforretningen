@@ -14,6 +14,13 @@ function getIndlaegById($id){
     return $result;
 }
 
+function getIndlaegByKat($id){
+    global $objCon;
+    $sql = "SELECT `id`, `overskrift`, `dato`, `kategori_id`, `tekst` FROM `indlaeg` WHERE `kategori_id` = $id";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
 function getComments($id){
     global $objCon;
     $sql = "SELECT `id`, `navn`, `mail`, `dato`, `tekst`, `indlaeg_id` FROM `kommentar` WHERE `indlaeg_id` = '$id' ORDER BY `dato` DESC";
@@ -80,6 +87,13 @@ function getCommentById($id){
 function getLastDay(){
     global $objCon;
     $sql = "SELECT `id`, `overskrift`, `dato`, `kategori_id`, `tekst` FROM `indlaeg` ORDER BY `id` DESC";
+    $result = $objCon->query($sql);
+    return $result;
+}
+
+function getSearch($tekst){
+    global $objCon;
+    $sql = "SELECT `id`, `overskrift`, `dato`, `kategori_id`, `tekst` FROM `indlaeg` WHERE `tekst` LIKE '%$tekst%' OR `overskrift` LIKE '%$tekst%'";
     $result = $objCon->query($sql);
     return $result;
 }

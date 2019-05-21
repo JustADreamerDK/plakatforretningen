@@ -1,7 +1,18 @@
 <?php
 include "include/connect.php";
 include "phpcode/crud.php";
+$kat = $_GET['id'];
+$soeg = $_POST['soeg'];
+if ($soeg <> ''){
+    $indlaeg = getSearch($soeg);
+    $kat == '';
+}
+if ($kat <> ''){
+    $indlaeg = getIndlaegByKat($kat);
+}
+if($kat == '' && $soeg == ''){
 $indlaeg = getIndlaeg();
+}
 ?>
 <!DOCTYPE html>
 <html lang="da">
@@ -11,6 +22,7 @@ $indlaeg = getIndlaeg();
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/css.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="img/tinyicon.png">
 </head>
 <body class="flex-column center">
@@ -55,5 +67,6 @@ $indlaeg = getIndlaeg();
         }
         ?>
     </section>
+    <script src="javascript/script.js"></script>
 </body>
 </html>
