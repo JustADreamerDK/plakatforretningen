@@ -72,7 +72,7 @@ include "../phpcode/crud.php";
                         ?>
                         <div class="flex middle p-b-10">
                             <h4>
-                                <a class="back" href="">
+                                <a class="back" href="tilfoej_billede.php?id=<?php echo$row ['id']; ?>">
                                     Tilføj billede
                                 </a>
                             </h4>
