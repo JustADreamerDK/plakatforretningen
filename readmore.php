@@ -60,7 +60,7 @@ $comment = $_GET['comment'];
                 <h3 class="m-20">Mange tak for din kommentar!</h3>
                 <?php
             }else{ ?>
-            <form  class="flex-column m-20" action="opret_comment.php?id=<?php echo $rowIndlaeg['id'];?>" method="post" class="flex-column">
+            <form  class="flex-column m-20" action="readmore.php?id=<?php echo $rowIndlaeg['id'];?>" method="post" class="flex-column">
                 <input class="p-10 m-tb-10" type="text" name="name" placeholder="Navn" required></input>
                 <input class="p-10" type="text" name="mail" placeholder="Mail adresse" required></input>
                 <textarea rows="8" class="p-10 m-tb-10" name="text">Skriv din kommentar her</textarea>

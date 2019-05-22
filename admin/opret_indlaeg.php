@@ -23,8 +23,8 @@ $kategori = getAllKategori();
 
             <form  class="flex-column m-20 w-80" action="post_opret_indlaeg.php" method="post" class="flex-column" enctype="multipart/form-data">
                 <label class="fileContainer">
-                    <input id="file-upload" type="file" name="image" required>
-                    <input type="hidden" name="input" value="file-upload" required>
+                    <input id="file-upload" type="file" name="image">
+                    <input type="hidden" name="input" value="file-upload">
                 </label>
                 <input class="p-10 m-tb-10" type="text" name="overskrift" placeholder="Overskrift" required></input>
                 <input class="p-10" type="date" name="dato" required></input>
