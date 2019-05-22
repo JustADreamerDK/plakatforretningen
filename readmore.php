@@ -85,6 +85,9 @@ $comment = $_GET['comment'];
                     </div>
                 <?php } ?>
             </div>
+            <div class="flex-column w-100 right">
+            <h4 class="p-b-25 bold"><a href="index.php">Tilbage</a></h4>
+        </div>
         </section>
         <script src="javascript/script.js"></script>
     </body>

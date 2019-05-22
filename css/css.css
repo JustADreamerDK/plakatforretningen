@@ -206,6 +206,9 @@ input[type=search]{
 .filterAaben{
     display: none;
 }
+.filterAabenMobil{
+    display: none;
+}
 .soegAaben{
     display: none;
 }
@@ -252,7 +255,7 @@ header{
 }
 
 .logo{
-    height: 100px;
+    height: 75px;
     padding: 10px;
 }
 .w-100{
@@ -282,9 +285,18 @@ tr:last-child{
 .dato{
     min-width: 85px;
 }
+.mobil{
+    display: none;
+}
 
 @media screen and (max-width: 1000px) {
     .content{
         width: 95%;
+    }
+    .computer{
+        display: none;
+    }
+    .mobil{
+        display: flex;
     }
 }

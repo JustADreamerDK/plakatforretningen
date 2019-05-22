@@ -13,7 +13,7 @@ include "../include/connect.php";
 </head>
 <body class="flex-column center">
     <section class="content flex-column center">
-        <img src="../img/logo-black.png">
+        <img class="m-t-10" src="../img/logo-black.png">
         <h2 class="m-20">Administration</h2>
             <form class="flex-column center w-100" action="tjek-login.php" method="post" class="flex-column">
                 <input class="p-10 m-tb-10" type="text" name="brugernavn" placeholder="Brugernavn" required></input>

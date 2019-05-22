@@ -33,7 +33,8 @@
                     echo $soeg;
                     ?>"
                 <?php } ?></h4>
-                <h4 class="bold filteret"><i class="fas fa-filter"></i></h4>
+                <h4 class="bold filteret computer"><i class="fas fa-filter"></i></h4>
+                <h4 class="bold filteretMobil mobil"><i class="fas fa-filter"></i></h4>
             </div>
         </div>
     </div>
@@ -55,6 +56,43 @@
                     Indretning
                 </a>
             </h4>
+            <h4 class="bold filter flex middle p-5">
+                <a href="index.php?id=4">
+                    Livsstil
+                </a>
+            </h4>
+            <h4 class="bold filter flex middle p-5">
+                <a href="index.php?id=2">
+                    Tips og tricks
+                </a>
+            </h4>
+            <h4 class="bold filter flex middle p-5">
+                <a href="index.php?id=5">
+                    Inspiration
+                </a>
+            </h4>
+        </div>
+    </div>
+
+    <div class="filterAabenMobil w-100 flex-column">
+        <div class="b-lightgrey w-100 flex between">
+            <h4 class="bold filter flex middle p-5">
+                <a href="index.php">
+                    Alle
+                </a>
+            </h4>
+            <h4 class="bold filter flex middle p-5">
+                <a href="index.php?id=3">
+                    Generelt
+                </a>
+            </h4>
+            <h4 class="bold filter flex middle p-5">
+                <a href="index.php?id=1">
+                    Indretning
+                </a>
+            </h4>
+        </div>
+        <div class="b-lightgrey w-100 flex between">
             <h4 class="bold filter flex middle p-5">
                 <a href="index.php?id=4">
                     Livsstil

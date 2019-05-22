@@ -1,9 +1,16 @@
 var filterBtn = document.querySelector(".filteret");
+var filterMobilBtn = document.querySelector(".filteretMobil");
 var filterAaben = document.querySelector(".filterAaben");
 var filterLuk = document.querySelector(".filterLuk");
+var filterAabenMobil = document.querySelector(".filterAabenMobil");
 
 filterBtn.addEventListener("click", function(event){
   filterAaben.style.display = "block";
+  filterLuk.style.display = "none";
+});
+
+filterMobilBtn.addEventListener("click", function(event){
+  filterAabenMobil.style.display = "block";
   filterLuk.style.display = "none";
 });
 
