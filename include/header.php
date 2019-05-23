@@ -1,7 +1,7 @@
 <header class="flex-column center">
     <div class="flex between center w-100 b-grey">
         <div class="flex-column middle">
-            <button class="header-knap"><a class="f-white" href="https://www.plakatforretningen.dk/">Shop</a></button>
+            <button class="header-knap"><a target="_blank" class="f-white" href="https://www.plakatforretningen.dk/">Shop</a></button>
         </div>
 
         <a href="index.php">
