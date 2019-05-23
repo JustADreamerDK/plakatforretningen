@@ -324,7 +324,7 @@ tr:last-child{
         font-size: 25px;
     }
 
-    p {
+    p, .p-b-25, .m-lr-20, .m-tb-10 {
       -webkit-font-size: 38px;
       line-height: 1.25;
       font-size: 38px;
