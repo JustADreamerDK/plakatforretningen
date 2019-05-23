@@ -7,6 +7,13 @@ $rowIndlaeg = mysqli_fetch_assoc($indlaeg);
 $comments = getComments($id);
 $checkComments = getComments($id);
 $comment = $_GET['comment'];
+$navn = $_POST['name'];
+$mail = $_POST['mail'];
+$dato = (new \DateTime())->format('Y-m-d');
+$tekst = $_POST['text'];
+$indlaeg_id = $_GET['id'];
+createComment($navn, $mail, $dato, $tekst, $indlaeg_id);
+header("location:readmore.php?id=$indlaeg_id");
 ?>
 
 <!DOCTYPE html>
@@ -27,13 +34,7 @@ $comment = $_GET['comment'];
 
         <div class="card m-tb-20">
             <?php
-                $navn = $_POST['name'];
-                $mail = $_POST['mail'];
-                $dato = (new \DateTime())->format('Y-m-d');
-                $tekst = $_POST['text'];
-                $indlaeg_id = $_GET['id'];
-                createComment($navn, $mail, $dato, $tekst, $indlaeg_id);
-                header("location:readmore.php?id=$indlaeg_id");
+
                 ?>
             </div>
         </section>
