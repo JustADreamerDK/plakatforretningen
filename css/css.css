@@ -325,8 +325,9 @@ tr:last-child{
     }
 
     p {
-      line-height: initial;
-      font-size: 25px;
+      -webkit-font-size: 38px;
+      line-height: 1.25;
+      font-size: 38px;
     }
 
     input[type=text]{
