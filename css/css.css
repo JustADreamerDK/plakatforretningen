@@ -191,9 +191,11 @@ input[type=search]{
       color:#E2E3DE;
       background-color: rgba(0, 0, 0, 0);
       border: 0px;
+      outline: none;
 }
 .soeg:hover {
   color: #EDEEEB;
+  cursor: pointer;
 }
 .filter{
     width: 100%;
@@ -208,6 +210,9 @@ input[type=search]{
 }
 .filterAabenMobil{
     display: none;
+}
+.filter:hover {
+  cursor: pointer;
 }
 .soegAaben{
     display: none;
@@ -349,6 +354,10 @@ tr:last-child{
     font-size: 45px;
     width: 175px;
     padding: 15px;
+  }
+
+  input[type=submit]:hover {
+    cursor: pointer;
   }
 
   .knap {
