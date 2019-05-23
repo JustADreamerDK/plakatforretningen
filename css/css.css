@@ -304,74 +304,70 @@ tr:last-child{
     .mobil{
         display: flex;
     }
-}
 
-@media screen and (max-width: 540px) {
-  h2 {
-    font-size: 78px;
-  }
+    h2 {
+      font-size: 78px;
+    }
 
-  h3 {
-    font-size: 60px;
-  }
+    h3 {
+      font-size: 60px;
+    }
 
-  h4 {
-    font-size: 50px;
-  }
+    h4 {
+      font-size: 50px;
+    }
 
-  h5{
-      font-size: 34px;
-  }
-  h6{
+    h5{
+        font-size: 34px;
+    }
+    h6{
+        font-size: 25px;
+    }
+
+    p {
+      line-height: initial;
       font-size: 25px;
-  }
+    }
 
-  p {
-    line-height: initial;
-    font-size: 25px;
-  }
+    input[type=text]{
+        border: 1px solid black;
+        width: 50%;
+        font-style: italic;
+        font-size: 40px;
+    }
+    input[type=password]{
+        border: 1px solid black;
+        width: 50%;
+        font-style: italic;
+        font-size: 40px;
+    }
+    input[type=date]{
+        border: 1px solid black;
+        width: 50%;
+        font-style: italic;
+        font-size: 40px;
+    }
 
-  input[type=text]{
-      border: 1px solid black;
-      width: 50%;
-      font-style: italic;
-      font-size: 40px;
-  }
-  input[type=password]{
-      border: 1px solid black;
-      width: 50%;
-      font-style: italic;
-      font-size: 40px;
-  }
-  input[type=date]{
-      border: 1px solid black;
-      width: 50%;
-      font-style: italic;
-      font-size: 40px;
-  }
+    input[type=submit]{
+      font-size: 45px;
+      width: 175px;
+      padding: 15px;
+    }
 
-  input[type=submit]{
-    font-size: 45px;
-    width: 175px;
-    padding: 15px;
-  }
+    input[type=submit]:hover {
+      cursor: pointer;
+    }
 
-  input[type=submit]:hover {
-    cursor: pointer;
-  }
+    .knap {
+      width: 175px;
+      padding: 15px;
+    }
 
-  .knap {
-    width: 175px;
-    padding: 15px;
-  }
+    a {
+      font-size: 45px;
+    }
 
-  a {
-    font-size: 45px;
-  }
-
-  .logo {
-    height: 120px;
-  }
-
-
+    .logo {
+      height: 120px;
+    }
 }
