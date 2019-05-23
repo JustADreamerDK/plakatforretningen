@@ -358,9 +358,13 @@ tr:last-child{
       cursor: pointer;
     }
 
+    .p-10 {
+      font-size: 40px;
+    }
+
     .knap {
-      width: 175px;
-      padding: 15px;
+      width: 220px;
+      padding: 20px;
     }
 
     a {
