@@ -15,7 +15,7 @@ include "../include/connect.php";
     <section class="content flex-column center">
         <img class="m-t-10" src="../img/logo-black.png">
         <h2 class="m-20">Administration</h2>
-            <form class="flex-column center w-100" action="tjek-login.php" method="post" class="flex-column">
+            <form class="flex-column center w-100" action="tjek-login.php" method="post">
                 <input class="p-10 m-tb-10" type="text" name="brugernavn" placeholder="Brugernavn" required></input>
                 <input class="p-10" type="password" name="password" placeholder="Password" required></input>
                 <div class="m-tb-10 w-50 flex-column right">

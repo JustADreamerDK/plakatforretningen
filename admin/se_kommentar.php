@@ -29,10 +29,8 @@ include "../phpcode/crud.php";
                                     <th></th>
                                 </tr>
 
-                                <ul class="margin-t-20">
                                     <?php
                                     $comments = getAllComments();
-                                    $i = 0;
                                     while ($row = mysqli_fetch_assoc($comments)) {
                                         ?>
                                         <tr>

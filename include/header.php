@@ -114,7 +114,7 @@
     <div class="soegAaben w-100">
         <div class="b-lightgrey w-100 flex middle ">
             <div class="content flex between p-5">
-                <form  class="flex w-100" action="index.php" method="post" class="flex-column">
+                <form  class="flex w-100" action="index.php" method="post">
                     <input class="p-10" type="search" name="soeg" placeholder="Søg"></input>
                     <input class="f-white bold m-lr-10" type="submit" value="Søg"></input>
                 </form>

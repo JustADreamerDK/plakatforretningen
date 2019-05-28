@@ -30,10 +30,8 @@ include "../phpcode/crud.php";
                                     <th></th>
                                 </tr>
 
-                                <ul class="margin-t-20">
                                     <?php
                                     $admin = getAllAdmins();
-                                    $i = 0;
                                     while ($row = mysqli_fetch_assoc($admin)) {
                                         ?>
                                         <tr>

@@ -25,7 +25,7 @@ $row = mysqli_fetch_assoc($indlaeg);
 
             <h3 class="p-10">Tilføj billede til følgende indlæg</h3>
 
-            <form  class="flex m-20 center" action="post_tilfoej_billede.php?id=<?php echo $id; ?>" method="post" class="flex-column" enctype="multipart/form-data">
+            <form  class="flex m-20 center" action="post_tilfoej_billede.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
                 <label class="fileContainer">
                     <input id="file-upload" type="file" name="image" required>
                     <input type="hidden" name="input" value="file-upload" required>

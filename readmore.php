@@ -49,18 +49,7 @@ $comment = $_GET['comment'];
 
         <div class="card m-tb-20">
             <h2 class="bold p-10 flex middle">Kommentarer</h2>
-            <?php if($comment == 'yes'){
-                $navn = $_POST['name'];
-                $mail = $_POST['mail'];
-                $dato = (new \DateTime())->format('Y-m-d');
-                $tekst = $_POST['text'];
-                $indlaeg_id = $_GET['id'];
-                createComment($navn, $mail, $dato, $tekst, $indlaeg_id);
-                ?>
-                <h3 class="m-20">Mange tak for din kommentar!</h3>
-                <?php
-            }else{ ?>
-            <form  class="flex-column m-20" action="opret_comment.php?id=<?php echo $rowIndlaeg['id'];?>" method="post" class="flex-column">
+            <form  class="flex-column m-20" action="opret_comment.php?id=<?php echo $rowIndlaeg['id'];?>" method="post">
                 <input class="p-10 m-tb-10" type="text" name="name" placeholder="Navn" required></input>
                 <input class="p-10" type="text" name="mail" placeholder="Mail adresse" required></input>
                 <textarea rows="8" class="p-10 m-tb-10" name="text">Skriv din kommentar her</textarea>
@@ -68,7 +57,7 @@ $comment = $_GET['comment'];
                     <input class="f-white bold" type="submit" value="Send"></input>
                 </div>
             </form>
-        <?php }
+        <?php
             $test = mysqli_fetch_assoc($checkComments);
             $check = $test['navn'];
             if ($check <> ''){?>
