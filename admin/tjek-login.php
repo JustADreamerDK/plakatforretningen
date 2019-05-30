@@ -7,10 +7,8 @@ $password = $_POST['password'];
 $kodeord = getUser($brugernavn);
 $row = mysqli_fetch_assoc($kodeord);
 $kode = $row['password'];
-$type = $row['brugertype_id'];
 $id = $row['id'];
 if ($password == "$kode") {
-    $_SESSION['brugertype'] = "$type";
     $_SESSION['id'] = "$id";
     header("location:forside.php");
 }

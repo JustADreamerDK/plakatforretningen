@@ -21,7 +21,7 @@ $kategori = getAllKategori();
 
             <h2>Opret indlæg</h2>
 
-            <form  class="flex-column m-20 w-80" action="post_opret_indlaeg.php" method="post" class="flex-column" enctype="multipart/form-data">
+            <form  class="flex-column m-20 w-80" action="post_opret_indlaeg.php" method="post" enctype="multipart/form-data">
                 <label class="fileContainer">
                     <input id="file-upload" type="file" name="image">
                     <input type="hidden" name="input" value="file-upload">

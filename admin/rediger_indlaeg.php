@@ -2,7 +2,6 @@
 session_start();
 include "../include/connect.php";
 include "../phpcode/crud.php";
-include "../phpcode/file-upload.php";
 $id = $_GET['id'];
 $indlaeg = getIndlaegById($id);
 $rowIndlaeg = mysqli_fetch_assoc($indlaeg);

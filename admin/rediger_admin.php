@@ -23,7 +23,7 @@ $rowAdmin = mysqli_fetch_assoc($admin);
 
             <h2>Rediger admin</h2>
 
-            <form  class="flex-column m-20 w-80" action="post_update_admin.php?id=<?php echo $id; ?>" method="post" class="flex-column">
+            <form  class="flex-column m-20 w-80" action="post_update_admin.php?id=<?php echo $id; ?>" method="post"">
                 <input class="p-10 m-tb-10" type="text" name="name" placeholder="Navn" value="<?php echo $rowAdmin['navn']; ?>" required></input>
                 <input class="p-10" type="text" name="mail" placeholder="Mail adresse" value="<?php echo $rowAdmin['email']; ?>" required></input>
                 <input class="p-10 m-tb-10" type="text" name="brugernavn" placeholder="Brugernavn" value="<?php echo $rowAdmin['brugernavn']; ?>" required></input>

@@ -1,3 +1,4 @@
+// Filteret
 var filterBtn = document.querySelector(".filteret");
 var filterMobilBtn = document.querySelector(".filteretMobil");
 var filterAaben = document.querySelector(".filterAaben");
@@ -14,6 +15,7 @@ filterMobilBtn.addEventListener("click", function(event){
   filterLuk.style.display = "none";
 });
 
+// Søgefunktion
 var soegBtn = document.querySelector(".soeg");
 var soegAaben = document.querySelector(".soegAaben");
 
@@ -23,7 +25,9 @@ soegBtn.addEventListener("click", function(event){
   filterAaben.style.display = "none";
 });
 
+// Søgefunktion luk
 var soegLuk = document.querySelector(".soegLuk");
+
 soegLuk.addEventListener("click", function(event){
   soegAaben.style.display = "none";
   filterLuk.style.display = "block";

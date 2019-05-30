@@ -11,8 +11,6 @@ createIndlaeg($overskrift, $dato, $kategori_id, $tekst);
 $lastDay = getLastDay();
 $rowLast = mysqli_fetch_assoc($lastDay);
 $indlaeg_id = $rowLast['id'];
-$billed = $_POST['image'];
-echo $billed;
 ?>
 <!DOCTYPE html>
 <html lang="da">
